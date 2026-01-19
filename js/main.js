@@ -97,7 +97,23 @@ $('#nav').affix({
   	// Pretty Photo
 	$("a[rel^='prettyPhoto']").prettyPhoto({
 		social_tools: false
-	});	
+	});
+
+  /* --- ここから追加 --- */
+jQuery(document).ready(function($) {
+  // ナビゲーションメニューが開く瞬間に実行
+  $('.navbar-collapse').on('show.bs.collapse', function () {
+    // ハンバーガーボタンに is-open クラスを追加
+    $('.navbar-toggle').addClass('is-open');
+  });
+
+  // ナビゲーションメニューが閉じる瞬間に実行
+  $('.navbar-collapse').on('hide.bs.collapse', function () {
+    // ハンバーガーボタンから is-open クラスを削除
+    $('.navbar-toggle').removeClass('is-open');
+  });
+});
+/* --- ここまで追加 --- */```
 
 }());
 
