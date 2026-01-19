@@ -138,9 +138,18 @@ hr {
 	color: #fff;
 }
 
-/* メニューが開いている時にアイコンをバツ印に変更 */
+/* 
+  メニューが閉じている時（.collapsedクラスがある時）のアイコンを三本線に指定
+*/
+.navbar-toggle.collapsed .fa-bars:before {
+  content: "\f0c9"; /* Font Awesomeの三本線(bars)のコード */
+}
+
+/* 
+  メニューが開いている時（.collapsedクラスがない時）のアイコンをバツ印に指定
+*/
 .navbar-toggle:not(.collapsed) .fa-bars:before {
-  content: "\f00d"; /* Font Awesomeのバツ印のコード */
+  content: "\f00d"; /* Font Awesomeのバツ印(times)のコード */
 }
 
 .btn-default {
